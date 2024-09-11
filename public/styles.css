@@ -1,26 +1,14 @@
-/* Basic reset */
-* {
+ /* Basic reset */
+ * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 /* Body styling */
 body {
+  
   font-family: 'Arial', sans-serif;
-  background: linear-gradient(135deg, #f0f0f0 25%, #a8e6ff 100%);
-  background-size: cover; /* Ensures background covers the entire viewport */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  text-align: center;
-  animation: backgroundAnimation 10s ease-in-out infinite;
-  position: relative; /* Ensures positioning of child elements is relative to body */
-  overflow: hidden; /* Prevents scrollbars from appearing */
-}
+  text-align: center;}
 
 /* Background animation */
 @keyframes backgroundAnimation {

@@ -9,25 +9,10 @@
     <style>
         /* Basic reset */
         * {
+            overflow: hidden;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-
-        /* Body styling */
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #f0f0f0 25%, #a8e6ff 100%);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
-            position: relative;
-            animation: backgroundAnimation 10s ease-in-out infinite;
-            color: #fff;
         }
 
         /* Ensuring background animation is behind the content */
@@ -52,8 +37,7 @@
             font-size: 3rem;
             font-weight: bold;
             text-transform: uppercase;
-            animation: glow 2s ease-in-out infinite alternate;
-            margin-top: 20px;
+            animation: glow 2s linear(0 0%, -0.43 -3.21%) infinite alternate;
             position: relative;
             z-index: 2; /* Ensures it's above the animation */
         }
