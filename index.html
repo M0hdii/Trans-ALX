@@ -9,7 +9,8 @@
     <style>
         /* Basic reset */
         * {
-            overflow-x:hidden;
+            color: #989898;
+            overflow-x: hidden;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -37,9 +38,9 @@
             font-size: 3rem;
             font-weight: bold;
             text-transform: uppercase;
-            animation: glow 2s linear(0 0%, -0.43 -3.21%) infinite alternate;
+            animation: glow 2s linear(0.24 -35.29%, -0.43 0%) infinite alternate;
             position: relative;
-            z-index: 2; /* Ensures it's above the animation */
+            z-index: 2;
         }
 
         @keyframes glow {
@@ -139,26 +140,24 @@
         #result {
             text-align: center;
             font-size: 1.4rem;
-             margin-top: 20px;
-             color: #ffffff;
-             animation: popUp 1s ease forwards, slideIn 1s ease-in;
-             position: relative;
-             z-index: 3;
-             padding-top: 40px;
-              width: 600px;
-              left: 700px;
-              bottom: 250px;
+            margin-top: 0px;
+            color: #ffffff;
+            animation: popUp 1s ease forwards, slideIn 1s ease-in;
+            position: relative;
+            z-index: 3;
+            padding-top: 40px;
+            width: 600px;
+            left: 700px;
+            bottom: 250px;
         }
 
         h2 {
             position: relative;
             color: #989898;
             z-index: 3;
-            padding-top: 20px;
             left: 300px;
-            top: 20px;
+            top: 40px;
         }
-
         @keyframes fadeIn {
             from { opacity: 0; transform: translateX(-100px); }
             to { opacity: 1; transform: translateY(30); }
@@ -172,6 +171,23 @@
         @keyframes slideIn {
             from { transform: translateY(20px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* About Us Section Styling */
+        .about-us {
+            z-index: 3;
+            padding: 20px;
+            margin: 40px 20px;
+            background-color: rgba(0, 0, 0, 0);
+            color: #fff;
+            border-radius: 10px;
+            text-align: center;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            right: 17px;
+            top: 40px;
         }
 
         /* Responsive adjustments */
@@ -192,11 +208,16 @@
             #result {
                 font-size: 1.2rem;
             }
+
+            .about-us {
+                width: 90%;
+            }
         }
     </style>
 </head>
 <body>
     <div>
+        <!-- Title Section -->
         <h1>Trans-ALX</h1>
         
         <!-- Word Carousel Animation -->
@@ -211,10 +232,8 @@
             </ul>
         </h4>
 
-         <!-- Display translation result -->
-         <h2>Translation Result:</h2>
-
-        <!-- Form for translation -->
+        <!-- Translation Form Section -->
+        <h2>Translation Result:</h2>
         <form id="translateForm">
             <label for="text">Enter text to translate:</label>
             <input type="text" id="text" name="text" placeholder="Type something..." required>
@@ -227,14 +246,27 @@
                 <option value="de">German</option>
                 <option value="it">Italian</option>
                 <option value="zh">Chinese</option>
-                <option value="ar">Arabic</option> <!-- Added Arabic -->
+                <option value="ar">Arabic</option>
                 <option value="ru">Russian</option>
             </select>
 
             <button type="submit">Translate</button>
         </form>
 
+        <!-- Display translation result -->
         <p id="result"></p>
+
+        <!-- About Us Section -->
+        <section class="about-us">
+            <h3>About Us</h3>
+            <p>
+                El Mehdi Omar Ben El Haj is a dedicated student at <strong>ALX Africa</strong> and <strong>Holberton School</strong>, 
+                specializing in software development. With a passion for coding and a commitment to excellence, El Mehdi is the 
+                sole developer behind the innovative apps, <strong>RainOrShine</strong> and <strong>Trans-ALX</strong>. His expertise 
+                and hard work have been instrumental in bringing this project to life, ensuring a seamless and user-friendly experience for all.
+            </p>
+        </section>
+    </div>
 
     <script>
         document.getElementById('translateForm').addEventListener('submit', async function(event) {

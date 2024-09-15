@@ -1,14 +1,24 @@
- /* Basic reset */
- * {
+/* Basic reset */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 /* Body styling */
 body {
-  
   font-family: 'Arial', sans-serif;
-  text-align: center;}
+  text-align: center;
+  background: linear-gradient(120deg, #89f7fe, #66a6ff);
+  background-size: 200% 200%;
+  animation: backgroundAnimation 10s ease infinite;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 /* Background animation */
 @keyframes backgroundAnimation {
@@ -22,9 +32,9 @@ h1 {
   font-size: 3rem;
   color: #fff;
   text-transform: uppercase;
-  animation: bounce 2s ease-in-out infinite; /* Added bounce animation */
-  position: relative; /* Ensures the title stays above the background */
-  z-index: 2; /* Ensures the title stays above the background */
+  animation: bounce 2s ease-in-out infinite;
+  position: relative;
+  z-index: 2;
   margin-bottom: 20px;
 }
 
@@ -44,25 +54,25 @@ h1 {
 /* Word Carousel */
 .wordCarousel {
   font-size: 1.5rem;
-  color: #333;
-  position: relative; /* Positioned relative to the flow of the page */
-  margin-bottom: 20px; /* Spacing between carousel and title */
-  z-index: 2; /* Ensures the carousel is above the background */
+  color: #fff;
+  position: relative;
+  margin-bottom: 20px;
+  z-index: 2;
 }
 
 .wordCarousel ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  position: relative; /* Positioned relative for proper animation */
+  position: relative;
   width: 100%;
-  height: auto; /* Adjust based on the total height of all words */
-  animation: wordFlip 8s ease-in-out infinite; /* Adjusted duration */
+  height: auto;
+  animation: wordFlip 8s ease-in-out infinite;
 }
 
 .wordCarousel li {
-  height: 60px; /* Height of each word */
-  line-height: 60px; /* Vertically centers text */
+  height: 60px;
+  line-height: 60px;
   text-align: center;
   color: #eee;
 }
@@ -73,42 +83,27 @@ h1 {
   25% { transform: translateY(-60px); }
   50% { transform: translateY(-120px); }
   75% { transform: translateY(-180px); }
-  100% { transform: translateY(-240px); } /* Adjust to fit all words */
+  100% { transform: translateY(-240px); }
 }
 
 /* Form box styling */
 form {
-  background: rgba(0, 0, 0, 0.7); /* Slightly darker background for contrast */
+  background: rgba(0, 0, 0, 0.7);
   border-radius: 12px;
   display: inline-block;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   position: relative;
-  z-index: 1; /* Ensure form is below the result */
+  z-index: 1;
   width: 30%;
-  margin-bottom: 20px; /* Space below the form */
-}
-
-/* Form box animation */
-@keyframes boxAnimation {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
-  }
-  50% {
-    transform: scale(1.05);
-    box-shadow: 0 0 35px rgba(0, 0, 0, 1);
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
-  }
+  margin-bottom: 20px;
+  padding: 20px;
 }
 
 /* Input styling */
 input, select, button {
   font-size: 1rem;
   margin: 10px 0;
-  padding: 12px; /* Slightly increased padding */
+  padding: 12px;
   border: none;
   border-radius: 5px;
   width: 100%;
@@ -120,13 +115,13 @@ button {
   color: #fff;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  border: 2px solid #fff; /* White border for contrast */
+  border: 2px solid #fff;
 }
 
 button:hover {
   background-color: #36c;
   transform: scale(1.05);
-  border-color: #36c; /* Match border color to hover state */
+  border-color: #36c;
 }
 
 /* Result styling */
@@ -134,16 +129,30 @@ button:hover {
   font-size: 1.4rem;
   color: #ffffff;
   animation: popUp 1s ease forwards, slideIn 1s ease-in;
-  position: relative; /* Ensures the result stays above the background */
-  z-index: 3; /* Ensure result is above both form and background */
+  position: relative;
+  z-index: 3;
   padding: 20px;
   background: rgba(0, 0, 0, 0);
   border-radius: 10px;
   text-align: left;
-  min-height: 100px; /* Adjust as needed */
+  min-height: 100px;
+  margin-bottom: 40px;
 }
 
-/* Keyframes for form and result animations */
+/* About Us section */
+.about-us {
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  margin-top: 30px;
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+/* Keyframes for animations */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -170,13 +179,15 @@ button:hover {
   }
 
   form {
-    padding: 15px;
-    width: 90%; /* Increase form width for smaller screens */
-    margin-bottom: 20px; /* Increased space below form */
+    width: 90%;
   }
 
   #result {
     font-size: 1.2rem;
-    width: 90%; /* Increase result width for smaller screens */
+  }
+
+  .about-us {
+    width: 95%;
+    font-size: 1rem;
   }
 }
