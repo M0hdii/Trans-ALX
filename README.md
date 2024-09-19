@@ -27,4 +27,30 @@ You can explore the application at www.trans-alx.me.
 - Axios: For making HTTP requests to the Google Cloud Translation API.
 - Google Cloud Translation API: Provides translation services.
 # Setup
-- No local installation is required. Visit www.trans-alx.me to start using the application.
+We welcome contributions to **Trans-ALX**! If you're interested in improving the project or adding new features, please follow these steps:
+
+### How to Contribute
+
+1. Fork the repository by clicking the "Fork" button at the top right of the page.
+2. Clone the forked repository to your local machine:
+    ```bash
+    git clone https://github.com/your-username/Trans-ALX.git
+    ```
+3. Create a new branch for your feature or fix:
+    ```bash
+    git checkout -b feature/your-feature-name
+    ```
+4. Make your changes and commit them:
+    ```bash
+    git commit -m "Add new feature or fix description"
+    ```
+5. Push your changes to GitHub:
+    ```bash
+    git push origin feature/your-feature-name
+    ```
+6. Open a Pull Request (PR) from your branch to the `main` branch of this repository.
+
+# License
+
+By contributing to this project, you agree that your contributions will be licensed under the MIT License.
+
