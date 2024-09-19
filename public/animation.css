@@ -36,6 +36,7 @@ div:after {
   background-position: left center, right center;
   animation: eyes 5000ms infinite;
 }
+
 @-moz-keyframes flashlight {
   0%, 9% {
     opacity: 0;
